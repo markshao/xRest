@@ -1,3 +1,5 @@
+package base;
+
 /**
  * Created with IntelliJ IDEA.
  * User: mark
@@ -6,5 +8,6 @@
  * To change this template use File | Settings | File Templates.
  */
 
-public class BaseTestClass {
+public abstract class BaseTestClass {
+
 }
