@@ -1,5 +1,8 @@
 package base;
 
+import client.IRestClient;
+import client.RestClientFactory;
+
 /**
  * Created with IntelliJ IDEA.
  * User: mark
@@ -9,5 +12,7 @@ package base;
  */
 
 public abstract class BaseTestClass {
+
+    protected IRestClient m_restClient = RestClientFactory.getInstance().getRestClient();
 
 }

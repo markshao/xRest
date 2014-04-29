@@ -4,6 +4,7 @@ import auth.BasicAuthInterceptor;
 import auth.NamePasswordInterceptor;
 import client.impl.RestClient;
 import context.SpringContextUtil;
+import convertors.json.RestJsonHttpMessageConverter;
 import org.apache.http.HttpRequestInterceptor;
 import org.apache.http.client.HttpClient;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
@@ -56,9 +57,9 @@ public class RestClientFactory {
         restClient.addMessageConverter(new ResourceHttpMessageConverter());
         restClient.addMessageConverter(new StringHttpMessageConverter());
 
-        // add the convertors for the rest client
-//        RestJsonHttpMessageConverter jsonConverter = SpringContextUtil.getApplicationContextJava().getBean(RestJsonHttpMessageConverter.class);
-//        restClient.addMessageConverter(jsonConverter);
+//        add the convertors for the rest client
+        RestJsonHttpMessageConverter jsonConverter = new RestJsonHttpMessageConverter();
+        restClient.addMessageConverter(jsonConverter);
 
         return restClient;
     }
