@@ -124,7 +124,6 @@ public class RestClient extends RestTemplate implements IRestClient {
         return exchangeObject(uri, requestHeaders, responseType, request, HttpMethod.PUT).getBody();
     }
 
-    @Override
     public <T> ResponseEntity<T> putForEntity(String uri, MediaType contentType, Object request, MediaType acceptMediaType, Class<T> responseType) throws RestTestException {
         // TODO Auto-generated method stub
         return putForEntity(uri, HttpUtil.setHttpHeaders(contentType, acceptMediaType), request, responseType);

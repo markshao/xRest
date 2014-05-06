@@ -55,13 +55,6 @@
             <version>1.2.2</version>
         </dependency>
 
-        <!-- DFC -->
-        <dependency>
-            <groupId>com.emc.documentum.dfc</groupId>
-            <artifactId>dfc</artifactId>
-            <version>7.1-SNAPSHOT</version>
-        </dependency>
-
         <!-- Logging -->
         <dependency>
             <groupId>org.slf4j</groupId>

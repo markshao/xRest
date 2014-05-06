@@ -15,7 +15,6 @@ import java.io.IOException;
  */
 
 public class BasicAuthInterceptor extends NamePasswordInterceptor {
-    @Override
     public void process(HttpRequest request, HttpContext context) throws HttpException, IOException {
         request.setHeader(
                 new BasicScheme().authenticate(new UsernamePasswordCredentials(userName, password), request, null));
