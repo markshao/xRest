@@ -7,13 +7,14 @@ package compaign;
  */
 
 import base.BaseTestClass;
-import junit.framework.Assert;
 import org.testng.annotations.Test;
+import util.RestUri;
+import util.query.QCustomerId;
 
 @Test
 public class TestCompaignNormal extends BaseTestClass {
 
     public void testHttpClient() throws Exception {
-        Assert.assertTrue(true);
+        System.out.println(RestUri.appendQueryParam("http://baidu.com/", new QCustomerId("1111")));
     }
 }
