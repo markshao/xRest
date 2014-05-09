@@ -1,5 +1,7 @@
 package models.campaign;
 
+import models.base.BaseModel;
+
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -7,7 +9,7 @@ import java.util.Date;
  * Created by Jacky.Li on 14-4-29.
  * 以下信息都是存放在campaign数据表里面
  */
-public class Campaign {
+public class Campaign extends BaseModel {
 
     public Date getStartTime() {
         return startTime;
@@ -237,4 +239,9 @@ public class Campaign {
      * 订单结束时间
      */
     private Date endTime;
+
+    @Override
+    public void validateSchema() throws Exception {
+        //To change body of implemented methods use File | Settings | File Templates.
+    }
 }
